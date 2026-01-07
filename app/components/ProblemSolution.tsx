@@ -4,25 +4,10 @@ import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 
 export default function ProblemSolution() {
-    const points = [
-        {
-            problem: "Inbox Overload",
-            solution: "Safe Automation",
-            desc: "Handle repetitive client enquiries across email and chat without giving professional advice.",
-            metric: "72% reduction"
-        },
-        {
-            problem: "Slow Response Times",
-            solution: "Instant Availability",
-            desc: "Respond immediately to common questions 24/7, improving client trust and satisfaction.",
-            metric: "34min → 48sec"
-        },
-        {
-            problem: "Risky AI Hallucinations",
-            solution: "Rule-Based Control",
-            desc: "Firm-approved templates and mandatory escalation rules ensure no unpredictable outputs.",
-            metric: "10% escalation rate"
-        },
+    const points: { problem: string; solution: string; desc: string; metric: string }[] = [
+
+
+
     ];
 
     return (
@@ -73,9 +58,8 @@ export default function ProblemSolution() {
                                     </div>
                                     <h3 className="text-lg font-bold text-red-400/90">{point.problem}</h3>
                                 </div>
-                                <p className="text-white/40 text-sm leading-relaxed mb-4 group-hover:opacity-50 transition-opacity">
-                                    Traditional manual handling
-                                </p>
+
+
                             </div>
 
                             {/* Animated Connector */}

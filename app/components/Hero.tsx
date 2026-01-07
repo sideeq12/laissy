@@ -6,7 +6,7 @@ import { ArrowRight, Play } from "lucide-react";
 export default function Hero() {
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 500], [0, 150]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
 
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 overflow-hidden">
@@ -38,7 +38,7 @@ export default function Hero() {
                 className="absolute bottom-1/4 -right-1/4 w-64 h-64 md:w-96 md:h-96 bg-accent/10 rounded-full blur-[128px] z-0"
             />
 
-            <motion.div style={{ opacity }} className="container px-4 sm:px-6 relative z-10 text-center">
+            <motion.div className="container px-4 sm:px-6 relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
-                    className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4"
+                    className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-xs sm:max-w-4xl mx-auto px-4"
                 >
                     {[
                         { value: "100%", label: "Safe & Compliant" },

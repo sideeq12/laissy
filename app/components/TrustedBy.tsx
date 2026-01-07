@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const partners = [
-    "MICROSOFT", "GOOGLE", "META", "AMAZON", "OPENAI", "ANTHROPIC"
-];
+const partners: string[] = [];
 
 export default function TrustedBy() {
     return (

@@ -6,6 +6,7 @@ import { Send, CheckCircle2, Loader2, ArrowRight } from "lucide-react";
 
 export default function ContactForm() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [selectedInterest, setSelectedInterest] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -68,62 +69,112 @@ export default function ContactForm() {
                                         <CheckCircle2 className="w-8 h-8" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-2">Message Received</h3>
-                                    <p className="text-white/60">We'll be in touch within 24 hours.</p>
+                                    <p className="text-white/60 max-w-xs mx-auto">
+                                        Thanks. We review every request manually and will follow up if there's a fit.
+                                    </p>
                                     <button
                                         onClick={() => setStatus("idle")}
                                         className="mt-6 text-sm text-primary hover:text-primary/80 font-medium"
                                     >
-                                        Send another message
+                                        Send another request
                                     </button>
                                 </motion.div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-4">
+                                <form onSubmit={handleSubmit} className="space-y-5">
+                                    {/* 1. Work Email (High Signal Filter) */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">Full Name</label>
-                                        <input
-                                            type="text"
-                                            required
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20"
-                                            placeholder="John Doe"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">Work Email</label>
+                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                            Work Email <span className="text-red-400">*</span>
+                                        </label>
                                         <input
                                             type="email"
                                             required
                                             className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20"
-                                            placeholder="john@company.com"
+                                            placeholder="name@company.com"
                                         />
                                     </div>
+
+                                    {/* 2. Company Name */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">Firm Name (Optional)</label>
+                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                            Company Name <span className="text-red-400">*</span>
+                                        </label>
                                         <input
                                             type="text"
+                                            required
                                             className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20"
-                                            placeholder="Acme Consulting"
+                                            placeholder="Acme Consulting Ltd"
+                                        />
+                                    </div>
+
+                                    {/* 3. Role (Qualifier) */}
+                                    <div>
+                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                            Your Role <span className="text-red-400">*</span>
+                                        </label>
+                                        <select
+                                            required
+                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-zinc-900"
+                                            defaultValue=""
+                                        >
+                                            <option value="" disabled>Select your role...</option>
+                                            <option value="partner">Partner / Founder</option>
+                                            <option value="manager">Manager / Operations</option>
+                                            <option value="admin">Admin / Support</option>
+                                            <option value="technical">IT / Technical</option>
+                                        </select>
+                                    </div>
+
+                                    {/* 4. Automation Interest */}
+                                    <div>
+                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                            What do you want to automate?
+                                        </label>
+                                        <select
+                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-zinc-900"
+                                            value={selectedInterest}
+                                            onChange={(e) => setSelectedInterest(e.target.value)}
+                                        >
+                                            <option value="" disabled>Select an option...</option>
+                                            <option value="email">Email enquiries</option>
+                                            <option value="chat">Website chat</option>
+                                            <option value="booking">Booking / scheduling</option>
+                                            <option value="voice">Voice / phone calls</option>
+                                        </select>
+                                    </div>
+
+                                    {/* 5. Problem Statement (Value) */}
+                                    <div>
+                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                            What problem are you trying to solve? <span className="text-red-400">*</span>
+                                        </label>
+                                        <textarea
+                                            required
+                                            rows={2}
+                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20 resize-none"
+                                            placeholder="e.g. Inbox overload, slow response times..."
                                         />
                                     </div>
 
                                     <button
                                         type="submit"
                                         disabled={status === "submitting"}
-                                        className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all mt-4 flex items-center justify-center gap-2 group"
+                                        className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all mt-6 flex items-center justify-center gap-2 group shadow-lg shadow-primary/20"
                                     >
                                         {status === "submitting" ? (
                                             <>
                                                 <Loader2 className="w-5 h-5 animate-spin" />
-                                                Sending...
+                                                Reviewing...
                                             </>
                                         ) : (
                                             <>
-                                                Request Demo Access
+                                                Request a Consultation
                                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                             </>
                                         )}
                                     </button>
                                     <p className="text-xs text-center text-white/30 mt-4">
-                                        No commitment required. We respect your inbox.
+                                        We manually review every request. Higher quality = faster response.
                                     </p>
                                 </form>
                             )}

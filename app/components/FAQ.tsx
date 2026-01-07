@@ -14,20 +14,10 @@ const faqs = [
         q: "What exactly does the system automate?",
         a: "It automates high-volume, repetitive client communication across email, chat, booking, and voice channels—handling enquiries like VAT deadlines, invoice resends, document status, and appointment scheduling."
     },
-    {
-        q: "Can this replace my staff?",
-        a: "No. This is assistive automation, not replacement. It handles time-consuming admin enquiries so your team can focus on advisory work and complex client cases."
-    },
+
 
     // SAFETY, CONTROL & TRUST
-    {
-        q: "How do you prevent the AI from giving advice?",
-        a: "Strict intent classification and firm-approved templates ensure the system only handles admin tasks. Any query flagged as advice-related is automatically escalated to your human team."
-    },
-    {
-        q: "What happens if the system is unsure?",
-        a: "It escalates immediately. If confidence thresholds aren't met, or if a query doesn't match known intents, it's routed to staff. No guessing."
-    },
+
     {
         q: "Can we review responses before they're sent?",
         a: "Yes. The platform starts in draft-only mode where all AI-generated responses require staff approval before sending. Auto-send is only enabled when you're ready."
@@ -47,15 +37,7 @@ const faqs = [
         a: "Yes. Every email interaction, intent classification, and escalation decision is logged with full traceability for audit and quality review."
     },
 
-    // CHATBOT & CLIENT EXPERIENCE
-    {
-        q: "Where does the chatbot live?",
-        a: "On your website or client portal. It's clearly branded as automated assistance with transparent capabilities—clients know exactly what it can help with."
-    },
-    {
-        q: "Can clients always reach a human?",
-        a: "Yes. Every chatbot conversation includes a 'Talk to a human' option. Frustrated or confused clients are immediately escalated to your team."
-    },
+
 
     // BOOKING & APPOINTMENTS
     {
