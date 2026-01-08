@@ -58,16 +58,17 @@ export default function Hero() {
                         transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 sm:mb-8 leading-[1.2] max-w-4xl mx-auto px-2"
                     >
-                        Automate Client Enquiries <br />
-                        <span className="text-gradient">For Professional Service Firms</span>
+                        Client Enquiry Automation <br />
+                        <span className="text-gradient">For Professional Firms</span>
                     </motion.h1>
+
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                        className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-10 leading-relaxed px-2"
+                        transition={{ delay: 0.6, duration: 0.8 }}
+                        className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-10 leading-relaxed px-2 font-light"
                     >
-                        Handle high-volume, repetitive client communication across email, chat, booking, and voice—without giving professional advice. Built for accounting, bookkeeping, tax, consulting, and agencies.
+                        Lovissa Consulting is a UK-based consulting firm specialising in client operations and automation. We design systems that reduce admin workload while maintaining compliance and human oversight.
                     </motion.p>
 
                     <motion.div
@@ -82,17 +83,9 @@ export default function Hero() {
                             whileTap={{ scale: 0.98 }}
                             className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all group text-sm sm:text-base"
                         >
-                            Start Automating
+                            Request a Consultation
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                         </motion.a>
-                        <motion.button
-                            whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto glass hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all text-sm sm:text-base"
-                        >
-                            <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-white" />
-                            Watch Demo
-                        </motion.button>
                     </motion.div>
                 </motion.div>
 
@@ -104,9 +97,9 @@ export default function Hero() {
                     className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-xs sm:max-w-4xl mx-auto px-4"
                 >
                     {[
-                        { value: "100%", label: "Safe & Compliant" },
-                        { value: "24/7", label: "Instant Responses" },
-                        { value: "2-3 Weeks", label: "To First Automation" }
+                        { value: "100%", label: "Human Oversight" },
+                        { value: "Zero", label: "Unauthorized Advice" },
+                        { value: "UK", label: "Based Consulting" }
                     ].map((stat, index) => (
                         <motion.div
                             key={index}
@@ -122,6 +115,6 @@ export default function Hero() {
                     ))}
                 </motion.div>
             </motion.div>
-        </section>
+        </section >
     );
 }

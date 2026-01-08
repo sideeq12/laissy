@@ -12,11 +12,10 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-2">
                         <div className="flex items-center mb-6">
-                            <span className="text-2xl font-bold tracking-tighter uppercase">Lovissa<span className="text-primary"> Consulting Ltd</span></span>
+                            <span className="text-2xl font-bold tracking-tighter uppercase">Lovissa<span className="text-primary"> Consulting</span></span>
                         </div>
                         <p className="text-white/40 max-w-sm leading-relaxed mb-8">
-                            Empowering forward-thinking companies with custom-built artificial general intelligence
-                            to automate the mundane and focus on the extraordinary.
+                            Client enquiry automation for professional firms. Reducing admin workload with safe, human-in-the-loop systems.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white/60 hover:text-white hover:border-primary/50 transition-all"><Twitter className="w-5 h-5" /></a>

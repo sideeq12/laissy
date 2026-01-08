@@ -101,16 +101,7 @@ export default function Impact() {
     };
 
     // Data for charts
-    const inboxData = {
-        labels: ["Before Automation", "After Automation"],
-        datasets: [{
-            label: "Weekly Inbound Enquiries",
-            data: [420, 118],
-            backgroundColor: ["rgba(239, 68, 68, 0.6)", "rgba(16, 185, 129, 0.6)"],
-            borderColor: ["rgb(239, 68, 68)", "rgb(16, 185, 129)"],
-            borderWidth: 2
-        }]
-    };
+
 
     const timeSavedData = {
         labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 6", "Week 8"],
@@ -125,19 +116,7 @@ export default function Impact() {
         }]
     };
 
-    const automationSplitData = {
-        labels: ["Automated Safely", "Draft-Only (Reviewed)", "Escalated to Human"],
-        datasets: [{
-            data: [72, 18, 10],
-            backgroundColor: [
-                "rgba(16, 185, 129, 0.8)",
-                "rgba(59, 130, 246, 0.8)",
-                "rgba(251, 191, 36, 0.8)"
-            ],
-            borderColor: ["rgb(16, 185, 129)", "rgb(59, 130, 246)", "rgb(251, 191, 36)"],
-            borderWidth: 2
-        }]
-    };
+
 
     const responseTimeData = {
         labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
@@ -215,21 +194,7 @@ export default function Impact() {
 
                 {/* Charts Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
-                    {/* Chart 1: Inbox Reduction */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="glass-card p-5 sm:p-6 md:p-8"
-                    >
-                        <h3 className="text-lg sm:text-xl font-bold mb-2">Inbox Volume Before vs After</h3>
-                        <p className="text-xs sm:text-sm text-white/50 mb-4 sm:mb-6">Weekly inbound client enquiries handled by the system</p>
-                        <div className="h-64 sm:h-80">
-                            <Bar data={inboxData} options={{ ...chartOptions, scales: chartOptions.scales }} />
-                        </div>
-                        <p className="text-xs text-white/40 mt-4 italic">Based on pilot deployment averaging 3 firms over 8 weeks.</p>
-                    </motion.div>
+
 
                     {/* Chart 2: Time Saved */}
                     <motion.div
@@ -247,21 +212,7 @@ export default function Impact() {
                         <p className="text-xs text-white/40 mt-4 italic">Time savings plateau as system reaches optimal performance.</p>
                     </motion.div>
 
-                    {/* Chart 3: Automation Split */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.5 }}
-                        className="glass-card p-5 sm:p-6 md:p-8"
-                    >
-                        <h3 className="text-lg sm:text-xl font-bold mb-2">How Enquiries Are Handled</h3>
-                        <p className="text-xs sm:text-sm text-white/50 mb-4 sm:mb-6">Distribution across automation confidence levels</p>
-                        <div className="h-64 sm:h-80 flex items-center justify-center">
-                            <Doughnut data={automationSplitData} options={{ ...chartOptions, scales: undefined }} />
-                        </div>
-                        <p className="text-xs text-white/40 mt-4 italic">10% escalation rate ensures safety and human oversight.</p>
-                    </motion.div>
+
 
                     {/* Chart 4: Response Time */}
                     <motion.div

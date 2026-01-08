@@ -34,7 +34,7 @@ export default function Navbar() {
         className="glass w-full max-w-7xl px-6 py-4 rounded-full flex items-center justify-between"
       >
         <div className="flex items-center">
-          <span className="text-xl font-bold tracking-tighter uppercase">Lovissa<span className="text-primary"> Consulting Ltd</span></span>
+          <span className="text-xl font-bold tracking-tighter uppercase">Lovissa<span className="text-primary"> Consulting</span></span>
         </div>
 
         {/* Desktop Links */}
@@ -52,7 +52,7 @@ export default function Navbar() {
             href="#contact"
             className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all"
           >
-            Get Started
+            Request Consultation
           </a>
         </div>
 
