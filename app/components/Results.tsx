@@ -22,11 +22,11 @@ const results = [
 
 export default function Results() {
     return (
-        <section id="results" className="py-24 relative bg-white/[0.01]">
+        <section id="results" className="py-24 relative bg-gray-50/30 font-medium">
             <div className="container px-6 mx-auto">
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Proven <span className="text-gradient">Impact</span></h2>
-                    <p className="text-white/60">Real data from businesses that have integrated our AI solutions.</p>
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">Proven <span className="text-gradient">Impact</span></h2>
+                    <p className="text-gray-500">Real data from businesses that have integrated our AI solutions.</p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -39,18 +39,18 @@ export default function Results() {
                         >
                             <div className="h-64 overflow-hidden relative">
                                 <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
                                 <div className="absolute bottom-6 left-8">
-                                    <h3 className="text-2xl font-bold">{item.title}</h3>
+                                    <h3 className="text-2xl font-bold text-white">{item.title}</h3>
                                 </div>
                             </div>
-                            <div className="p-10 flex flex-col md:flex-row gap-8 items-center bg-white/[0.02]">
+                            <div className="p-10 flex flex-col md:flex-row gap-8 items-center bg-white">
                                 <div className="flex-1 text-center md:text-left">
                                     <div className="text-5xl font-black text-primary mb-2">{item.metric}</div>
-                                    <div className="text-white/50 font-medium">{item.label}</div>
+                                    <div className="text-gray-500 font-medium">{item.label}</div>
                                 </div>
-                                <div className="w-px h-12 bg-white/10 hidden md:block" />
-                                <div className="flex items-center gap-4 text-white/40">
+                                <div className="w-px h-12 bg-gray-100 hidden md:block" />
+                                <div className="flex items-center gap-4 text-gray-400">
                                     {item.icon}
                                     <span className="text-sm font-semibold tracking-wider">VERIFIED RESULT</span>
                                 </div>

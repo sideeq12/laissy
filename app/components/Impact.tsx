@@ -75,27 +75,27 @@ export default function Impact() {
             legend: {
                 display: true,
                 labels: {
-                    color: "rgba(255, 255, 255, 0.7)",
+                    color: "rgba(17, 24, 39, 0.7)",
                     font: { size: 12 }
                 }
             },
             tooltip: {
-                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
                 padding: 12,
-                titleColor: "#fff",
-                bodyColor: "#fff",
+                titleColor: "#111827",
+                bodyColor: "#111827",
                 borderColor: "rgba(59, 130, 246, 0.3)",
                 borderWidth: 1
             }
         },
         scales: {
             x: {
-                grid: { color: "rgba(255, 255, 255, 0.05)" },
-                ticks: { color: "rgba(255, 255, 255, 0.6)" }
+                grid: { color: "rgba(0, 0, 0, 0.05)" },
+                ticks: { color: "rgba(17, 24, 39, 0.6)" }
             },
             y: {
-                grid: { color: "rgba(255, 255, 255, 0.05)" },
-                ticks: { color: "rgba(255, 255, 255, 0.6)" }
+                grid: { color: "rgba(0, 0, 0, 0.05)" },
+                ticks: { color: "rgba(17, 24, 39, 0.6)" }
             }
         }
     };
@@ -132,14 +132,14 @@ export default function Impact() {
     };
 
     const stats = [
-        { icon: <CheckCircle2 className="w-6 h-6" />, value: "72%", label: "Enquiries Automated Safely" },
+        { icon: <CheckCircle2 className="w-6 h-6" />, value: "72%", label: "CRM Tasks Automated Safely" },
         { icon: <Clock className="w-6 h-6" />, value: "6.2", label: "Hours Saved per Week" },
         { icon: <TrendingDown className="w-6 h-6" />, value: "72%", label: "Inbox Volume Reduction" },
         { icon: <Shield className="w-6 h-6" />, value: "10%", label: "Escalation Rate (Good!)" }
     ];
 
     return (
-        <section ref={sectionRef} id="impact" className="py-16 sm:py-20 md:py-24 bg-white/[0.02] relative overflow-hidden">
+        <section ref={sectionRef} id="impact" className="py-16 sm:py-20 md:py-24 bg-gray-50/50 relative overflow-hidden">
             <div className="container px-4 sm:px-6 mx-auto">
                 {/* Header */}
                 <motion.div
@@ -155,7 +155,7 @@ export default function Impact() {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 px-2">
                         Measured Impact, Not <span className="text-gradient">Marketing Claims</span>
                     </h2>
-                    <p className="text-white/60 max-w-2xl mx-auto text-sm sm:text-base px-4">
+                    <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-4">
                         Real operational outcomes from pilot deployments and production usage. Conservative estimates, no exaggeration.
                     </p>
                 </motion.div>
@@ -187,7 +187,7 @@ export default function Impact() {
                             >
                                 0
                             </div>
-                            <p className="text-xs sm:text-sm text-white/60">{stat.label}</p>
+                            <p className="text-xs sm:text-sm text-gray-500">{stat.label}</p>
                         </motion.div>
                     ))}
                 </motion.div>
@@ -204,12 +204,12 @@ export default function Impact() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="glass-card p-5 sm:p-6 md:p-8"
                     >
-                        <h3 className="text-lg sm:text-xl font-bold mb-2">Weekly Staff Time Recovered</h3>
-                        <p className="text-xs sm:text-sm text-white/50 mb-4 sm:mb-6">Cumulative hours saved per week as system learns</p>
+                        <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900">Weekly Staff Time Recovered</h3>
+                        <p className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">Cumulative hours saved per week as system learns</p>
                         <div className="h-64 sm:h-80">
                             <Line data={timeSavedData} options={{ ...chartOptions, scales: chartOptions.scales }} />
                         </div>
-                        <p className="text-xs text-white/40 mt-4 italic">Time savings plateau as system reaches optimal performance.</p>
+                        <p className="text-xs text-gray-400 mt-4 italic">Time savings plateau as system reaches optimal performance.</p>
                     </motion.div>
 
 
@@ -222,12 +222,12 @@ export default function Impact() {
                         transition={{ duration: 0.6, delay: 0.6 }}
                         className="glass-card p-5 sm:p-6 md:p-8"
                     >
-                        <h3 className="text-lg sm:text-xl font-bold mb-2">Average Client Response Time</h3>
-                        <p className="text-xs sm:text-sm text-white/50 mb-4 sm:mb-6">From hours to near-instant for common enquiries</p>
+                        <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900">Average Client Response Time</h3>
+                        <p className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">From hours to near-instant for common enquiries</p>
                         <div className="h-64 sm:h-80">
                             <Line data={responseTimeData} options={{ ...chartOptions, scales: chartOptions.scales }} />
                         </div>
-                        <p className="text-xs text-white/40 mt-4 italic">Response time measured from enquiry received to first reply sent.</p>
+                        <p className="text-xs text-gray-400 mt-4 italic">Response time measured from lead received to first reply sent.</p>
                     </motion.div>
                 </div>
 
@@ -241,11 +241,11 @@ export default function Impact() {
                 >
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <Shield className="w-5 h-5 text-primary" />
-                        <p className="text-sm sm:text-base font-semibold text-white/80">
+                        <p className="text-sm sm:text-base font-semibold text-gray-700">
                             Automation is intentionally limited. When confidence drops, the system escalates.
                         </p>
                     </div>
-                    <p className="text-xs sm:text-sm text-white/50">
+                    <p className="text-xs sm:text-sm text-gray-400">
                         Based on pilot deployments and early production usage. Results vary by firm size, enquiry volume, and complexity.
                     </p>
                 </motion.div>

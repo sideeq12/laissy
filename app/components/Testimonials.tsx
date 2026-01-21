@@ -28,7 +28,7 @@ export default function Testimonials() {
     return (
         <section id="testimonials" className="py-24 relative">
             <div className="container px-6 mx-auto">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-20 line-height-tight">Voices of <span className="text-gradient">Success</span></h2>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-20 line-height-tight text-gray-900">Voices of <span className="text-gradient">Success</span></h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {testimonials.map((t, index) => (
@@ -43,14 +43,14 @@ export default function Testimonials() {
                                 <div className="flex gap-1 mb-6 text-yellow-500">
                                     {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                                 </div>
-                                <p className="text-white/70 italic leading-relaxed mb-8">&quot;{t.content}&quot;</p>
+                                <p className="text-gray-600 italic leading-relaxed mb-8">&quot;{t.content}&quot;</p>
                             </div>
 
-                            <div className="flex items-center gap-4 border-t border-white/5 pt-6">
+                            <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
                                 <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border border-primary/30" />
                                 <div>
-                                    <h4 className="font-bold text-sm">{t.name}</h4>
-                                    <p className="text-white/40 text-xs">{t.role}</p>
+                                    <h4 className="font-bold text-sm text-gray-900">{t.name}</h4>
+                                    <p className="text-gray-500 text-xs">{t.role}</p>
                                 </div>
                             </div>
                         </motion.div>

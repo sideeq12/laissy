@@ -16,9 +16,14 @@ export default function Navbar() {
   const navBackground = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.9)"]
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.9)"]
   );
   const navBlur = useTransform(scrollY, [0, 100], [0, 12]);
+  const navText = useTransform(
+    scrollY,
+    [0, 100],
+    ["rgba(255, 255, 255, 1)", "rgba(17, 24, 39, 1)"]
+  );
 
   return (
     <motion.nav
@@ -34,19 +39,20 @@ export default function Navbar() {
         className="glass w-full max-w-7xl px-6 py-4 rounded-full flex items-center justify-between"
       >
         <div className="flex items-center">
-          <span className="text-xl font-bold tracking-tighter uppercase">Lovissa<span className="text-primary"> Consulting</span></span>
+          <img src="/logopng.png" alt="Lovissa Consulting Logo" className="h-8 w-auto object-contain" />
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <motion.a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+              style={{ color: navText }}
+              className="text-sm font-medium hover:text-primary transition-colors"
             >
               {link.name}
-            </a>
+            </motion.a>
           ))}
           <a
             href="#contact"
@@ -57,12 +63,13 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-white"
+        <motion.button
+          style={{ color: navText }}
+          className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        </motion.button>
       </motion.div>
 
       {/* Mobile Menu */}

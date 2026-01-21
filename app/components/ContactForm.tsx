@@ -26,18 +26,18 @@ export default function ContactForm() {
                     className="glass-card p-6 sm:p-10 md:p-14 relative overflow-hidden"
                 >
                     {/* Background Glow */}
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
                     <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
                         {/* Text Side */}
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs sm:text-sm font-bold mb-6 uppercase tracking-wider">
+                            <span className="inline-block px-4 py-2 rounded-full border border-primary/20 bg-black text-white text-xs sm:text-sm font-bold mb-6 uppercase tracking-wider">
                                 Start Automation
                             </span>
                             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                                 Ready to Safe-Guard Your Time?
                             </h2>
-                            <p className="text-white/60 mb-8 leading-relaxed">
+                            <p className="text-gray-500 mb-8 leading-relaxed">
                                 Join forward-thinking professional service firms automating their client enquiries safely. No "AI hype" — just solid, rule-based efficiency.
                             </p>
 
@@ -47,7 +47,7 @@ export default function ContactForm() {
                                     "Human-in-the-loop escalation",
                                     "2-3 week average deployment"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-white/80">
+                                    <li key={i} className="flex items-center gap-3 text-gray-600">
                                         <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                                             <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
                                         </div>
@@ -58,7 +58,7 @@ export default function ContactForm() {
                         </div>
 
                         {/* Form Side */}
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
+                        <div className="bg-white border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-sm">
                             {status === "success" ? (
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
@@ -68,8 +68,8 @@ export default function ContactForm() {
                                     <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <CheckCircle2 className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-2">Message Received</h3>
-                                    <p className="text-white/60 max-w-xs mx-auto">
+                                    <h3 className="text-2xl font-bold mb-2 text-gray-900">Message Received</h3>
+                                    <p className="text-gray-600 max-w-xs mx-auto">
                                         Thanks. We review every request manually and will follow up if there's a fit.
                                     </p>
                                     <button
@@ -83,38 +83,38 @@ export default function ContactForm() {
                                 <form onSubmit={handleSubmit} className="space-y-5">
                                     {/* 1. Work Email (High Signal Filter) */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
-                                            Work Email <span className="text-red-400">*</span>
+                                        <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                            Work Email <span className="text-red-500">*</span>
                                         </label>
                                         <input
                                             type="email"
                                             required
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
                                             placeholder="name@company.com"
                                         />
                                     </div>
 
                                     {/* 2. Company Name */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
-                                            Company Name <span className="text-red-400">*</span>
+                                        <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                            Company Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
                                             type="text"
                                             required
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
                                             placeholder="Acme Consulting Ltd"
                                         />
                                     </div>
 
                                     {/* 3. Role (Qualifier) */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
-                                            Your Role <span className="text-red-400">*</span>
+                                        <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                            Your Role <span className="text-red-500">*</span>
                                         </label>
                                         <select
                                             required
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-zinc-900"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-white"
                                             defaultValue=""
                                         >
                                             <option value="" disabled>Select your role...</option>
@@ -127,11 +127,11 @@ export default function ContactForm() {
 
                                     {/* 4. Automation Interest */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
+                                        <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
                                             What do you want to automate?
                                         </label>
                                         <select
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-zinc-900"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-white"
                                             value={selectedInterest}
                                             onChange={(e) => setSelectedInterest(e.target.value)}
                                         >
@@ -145,13 +145,13 @@ export default function ContactForm() {
 
                                     {/* 5. Problem Statement (Value) */}
                                     <div>
-                                        <label className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2 block">
-                                            What problem are you trying to solve? <span className="text-red-400">*</span>
+                                        <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                            What problem are you trying to solve? <span className="text-red-500">*</span>
                                         </label>
                                         <textarea
                                             required
                                             rows={2}
-                                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-white/20 resize-none"
+                                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400 resize-none"
                                             placeholder="e.g. Inbox overload, slow response times..."
                                         />
                                     </div>
@@ -173,7 +173,7 @@ export default function ContactForm() {
                                             </>
                                         )}
                                     </button>
-                                    <p className="text-xs text-center text-white/30 mt-4">
+                                    <p className="text-xs text-center text-gray-400 mt-4">
                                         We manually review every request. Higher quality = faster response.
                                     </p>
                                 </form>

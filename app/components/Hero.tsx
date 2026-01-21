@@ -17,7 +17,7 @@ export default function Hero() {
                     alt="Professional office workspace"
                     className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/85" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60" />
             </motion.div>
 
             {/* Decorative Elements */}
@@ -50,7 +50,7 @@ export default function Hero() {
                         transition={{ delay: 0.2, duration: 0.6 }}
                         className="inline-block px-3 py-1.5 sm:px-4 rounded-full border border-white/10 bg-white/5 text-xs sm:text-sm font-medium text-primary mb-4 sm:mb-6"
                     >
-                        Safe, Rule-Based Client Enquiry Automation
+                        Safe, Rule-Based CRM Automation
                     </motion.span>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function Hero() {
                         transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 sm:mb-8 leading-[1.2] max-w-4xl mx-auto px-2"
                     >
-                        Client Enquiry Automation <br />
+                        CRM Automation <br />
                         <span className="text-gradient">For Professional Firms</span>
                     </motion.h1>
 
@@ -66,7 +66,7 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
-                        className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-10 leading-relaxed px-2 font-light"
+                        className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-10 leading-relaxed px-2 font-light"
                     >
                         Lovissa Consulting is a UK-based consulting firm specialising in client operations and automation. We design systems that reduce admin workload while maintaining compliance and human oversight.
                     </motion.p>
@@ -110,7 +110,7 @@ export default function Hero() {
                             className="glass-card p-5 sm:p-6 text-center cursor-default"
                         >
                             <p className="text-2xl sm:text-3xl font-black text-primary mb-1 sm:mb-2">{stat.value}</p>
-                            <p className="text-xs sm:text-sm text-white/60">{stat.label}</p>
+                            <p className="text-xs sm:text-sm text-gray-500">{stat.label}</p>
                         </motion.div>
                     ))}
                 </motion.div>

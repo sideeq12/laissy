@@ -8,7 +8,7 @@ const faqs = [
     // CORE PRODUCT & POSITIONING
     {
         q: "Is this a generic AI chatbot?",
-        a: "No. This is a rule-based client enquiry automation platform specifically designed for professional service firms. It handles repetitive admin questions only—never professional advice."
+        a: "No. This is a rule-based CRM automation platform specifically designed for professional service firms. It handles repetitive admin questions only—never professional advice."
     },
     {
         q: "What exactly does the system automate?",
@@ -60,7 +60,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section id="faq" className="py-24 relative bg-white/[0.01]">
+        <section id="faq" className="py-24 relative bg-gray-50/50">
             <div className="container px-6 mx-auto max-w-4xl">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16">Common <span className="text-gradient">Questions</span></h2>
 
@@ -69,9 +69,9 @@ export default function FAQ() {
                         <div key={index} className="glass-card overflow-hidden">
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full p-6 text-left flex justify-between items-center hover:bg-white/5 transition-colors"
+                                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                             >
-                                <span className="text-lg font-bold">{faq.q}</span>
+                                <span className="text-lg font-bold text-gray-900">{faq.q}</span>
                                 {openIndex === index ? <Minus className="text-primary" /> : <Plus />}
                             </button>
 
@@ -83,7 +83,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="p-6 pt-0 text-white/50 leading-relaxed">
+                                        <div className="p-6 pt-0 text-gray-500 leading-relaxed">
                                             {faq.a}
                                         </div>
                                     </motion.div>
