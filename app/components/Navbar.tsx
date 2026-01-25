@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -12,31 +12,16 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
-  const navBackground = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.9)"]
-  );
-  const navBlur = useTransform(scrollY, [0, 100], [0, 12]);
-  const navText = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(17, 24, 39, 1)", "rgba(17, 24, 39, 1)"]
-  );
+  const navText = "rgba(17, 24, 39, 1)";
 
   return (
     <motion.nav
-      style={{
-        backgroundColor: navBackground,
-        backdropFilter: useTransform(navBlur, (blur) => `blur(${blur}px)`),
-      }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 transition-all"
     >
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="glass w-full max-w-7xl px-6 py-4 rounded-full flex items-center justify-between"
+        className="bg-white shadow-xl w-full max-w-7xl px-6 py-4 rounded-full flex items-center justify-between border border-gray-100"
       >
         <div className="flex items-center">
           <img src="/logopng.png" alt="Lovissa Consulting Logo" className="h-8 w-auto object-contain" />
@@ -77,7 +62,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="absolute top-20 left-4 right-4 glass p-6 rounded-2xl md:hidden flex flex-col gap-4 text-center"
+          className="absolute top-20 left-4 right-4 bg-white shadow-2xl p-6 rounded-2xl md:hidden flex flex-col gap-4 text-center border border-gray-100"
         >
           {navLinks.map((link) => (
             <a

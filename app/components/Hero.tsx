@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#0F172A]">
+        <section className="relative min-h-[90vh] flex items-center pt-28 overflow-hidden bg-[#0F172A]">
             {/* Background Image Container */}
             <div className="absolute inset-0 z-0">
                 <img
