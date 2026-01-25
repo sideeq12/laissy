@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Twitter, Linkedin, Github, Mail, ArrowRight } from "lucide-react";
+import { Bot, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -15,13 +15,20 @@ export default function Footer() {
                         <p className="text-white/60 max-w-sm leading-relaxed mb-4">
                             CRM automation for professional firms. Reducing admin workload with safe, human-in-the-loop systems.
                         </p>
-                        <p className="text-white/40 text-sm mb-8">
+                        <p className="text-white/40 text-sm mb-2">
                             Address: 26, The Monico. Pantbach Road. CF14 1UU
                         </p>
+                        <a href="mailto:info@lovissaconsulting.co.uk" className="text-white/40 text-sm mb-8 block hover:text-primary transition-colors flex items-center gap-2">
+                            <Mail className="w-3.5 h-3.5 text-primary" />
+                            info@lovissaconsulting.co.uk
+                        </a>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all"><Twitter className="w-5 h-5" /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all"><Linkedin className="w-5 h-5" /></a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all"><Github className="w-5 h-5" /></a>
+                            <a href="https://www.linkedin.com/company/lovissa-consulting-ltd/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                                <Linkedin className="w-5 h-5" />
+                            </a>
+                            <a href="https://www.instagram.com/lovissaconsultingltd?igsh=eDVlYWM5bjVteW44" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                                <Instagram className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
 
@@ -45,14 +52,8 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-white/10 text-xs font-bold text-white/40 tracking-widest uppercase">
+                <div className="pt-12 border-t border-white/10 text-xs font-bold text-white/40 tracking-widest uppercase text-center">
                     <p>© 2026 LOVISSA CONSULTING LTD. ALL RIGHTS RESERVED.</p>
-                    <div className="flex gap-8">
-                        <a href="mailto:hello@neuronai.co" className="flex items-center gap-2 hover:text-primary transition-colors">
-                            <Mail className="w-4 h-4 text-primary" />
-                            HELLO@LOVISSA.LTD
-                        </a>
-                    </div>
                 </div>
             </div>
         </footer>
