@@ -37,7 +37,7 @@ export default function Testimonials() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card p-8 flex flex-col justify-between"
+                            className="glass-card p-8 flex flex-col justify-between border-2 border-black"
                         >
                             <div>
                                 <div className="flex gap-1 mb-6 text-yellow-500">

@@ -84,7 +84,7 @@ export default function Impact() {
                 padding: 12,
                 titleColor: "#111827",
                 bodyColor: "#111827",
-                borderColor: "rgba(59, 130, 246, 0.3)",
+                borderColor: "rgba(16, 185, 129, 0.3)",
                 borderWidth: 1
             }
         },
@@ -108,8 +108,8 @@ export default function Impact() {
         datasets: [{
             label: "Hours Saved Per Week",
             data: [1.2, 2.8, 4.5, 5.8, 6.2, 6.4],
-            borderColor: "rgb(59, 130, 246)",
-            backgroundColor: "rgba(59, 130, 246, 0.1)",
+            borderColor: "rgb(16, 185, 129)",
+            backgroundColor: "rgba(16, 185, 129, 0.1)",
             fill: true,
             tension: 0.4,
             borderWidth: 3
@@ -123,8 +123,8 @@ export default function Impact() {
         datasets: [{
             label: "Average Response Time (minutes)",
             data: [34, 12, 4, 0.8],
-            borderColor: "rgb(139, 92, 246)",
-            backgroundColor: "rgba(139, 92, 246, 0.2)",
+            borderColor: "rgb(52, 211, 153)",
+            backgroundColor: "rgba(52, 211, 153, 0.2)",
             fill: true,
             tension: 0.4,
             borderWidth: 3

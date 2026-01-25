@@ -8,7 +8,7 @@ const services = [
         title: "CRM Automation",
         desc: "Automate CRM updates and client communication with safe, firm-approved responses. Always includes clear escalation paths to your team.",
         icon: <Mail className="w-8 h-8" />,
-        color: "bg-blue-500"
+        color: "bg-primary"
     },
     {
         title: "Email & Chat Workflow Design",
@@ -65,7 +65,7 @@ export default function Services() {
                     </div>
                     <motion.a
                         href="#contact"
-                        whileHover={{ scale: 1.05, borderColor: "rgba(59, 130, 246, 0.5)" }}
+                        whileHover={{ scale: 1.05, borderColor: "rgba(16, 185, 129, 0.5)" }}
                         whileTap={{ scale: 0.98 }}
                         className="glass px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold border-primary/20 hover:border-primary/50 transition-all w-full md:w-auto inline-block text-center text-gray-800"
                     >
@@ -83,13 +83,10 @@ export default function Services() {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            variants={itemVariants}
-                            whileHover={{
-                                y: -8,
-                                scale: 1.02,
-                                transition: { duration: 0.3 }
-                            }}
-                            className="glass-card p-6 sm:p-8 md:p-10 group cursor-pointer"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="glass-card p-10 flex flex-col items-center text-center group border-2 border-black"
                         >
                             <motion.div
                                 whileHover={{ rotate: 360, scale: 1.1 }}

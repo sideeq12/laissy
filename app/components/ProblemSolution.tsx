@@ -72,7 +72,7 @@ export default function ProblemSolution() {
                             {/* Solution Section (Bottom) */}
                             <div className="p-6 sm:p-8 flex-1 relative z-10 bg-gradient-to-t from-primary/5 to-transparent transition-colors duration-500 group-hover:from-primary/10 group-hover:to-primary/5">
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(16, 185, 129, 0.3)]">
                                         <CheckCircle2 className="w-5 h-5 text-primary" />
                                     </div>
                                     <h3 className="text-lg font-bold text-gray-800 group-hover:text-primary transition-colors duration-300">{point.solution}</h3>

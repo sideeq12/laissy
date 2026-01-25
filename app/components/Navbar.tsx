@@ -22,7 +22,7 @@ export default function Navbar() {
   const navText = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(255, 255, 255, 1)", "rgba(17, 24, 39, 1)"]
+    ["rgba(17, 24, 39, 1)", "rgba(17, 24, 39, 1)"]
   );
 
   return (
