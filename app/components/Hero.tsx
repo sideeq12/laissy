@@ -38,7 +38,7 @@ export default function Hero() {
                             CRM Automation
                         </h1>
                         <p className="text-[#E0E0E0] text-lg sm:text-xl mb-10 leading-relaxed font-light opacity-90 max-w-2xl">
-                            Lovissa Consulting is a UK-based consulting firm specialising in compliant client operations and automation. We design systems that reduce admin workload while maintaining regulatory integrity and human oversight.
+                            Eliminate repetitive administrative work while maintaining total regulatory integrity. We design safe, human-in-the-loop systems specifically for professional service firms.
                         </p>
 
                         {/* Trust Signals / Stat Badges */}

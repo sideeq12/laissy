@@ -14,7 +14,7 @@ const steps = [
     {
         num: "02",
         title: "Scope Definition",
-        desc: "V1 handles VAT dates & invoices. No tax advice. Clear escalation rules.",
+        desc: "Deadlines reminder, invoices, and process guidance. Clear escalation rules.",
         icon: <Search className="w-6 h-6" />,
         date: "Phase 2"
     },

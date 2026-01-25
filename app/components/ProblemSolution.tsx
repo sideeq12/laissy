@@ -103,13 +103,14 @@ export default function ProblemSolution() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.6 }}
-                    className="text-center mt-12 sm:mt-16"
+                    className="text-center mt-6 sm:mt-10"
                 >
                     <motion.a
                         href="#contact"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className="glass px-8 py-4 rounded-full font-bold border-primary/30 hover:border-primary/60 transition-all inline-flex items-center gap-2 group text-gray-800"
+                        className="glass px-8 py-4 rounded-full font-bold border-primary/30 hover:border-primary/60 transition-all
+                         inline-flex items-center gap-2 group text-gray-800"
                     >
                         See How It Works
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

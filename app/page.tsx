@@ -5,6 +5,7 @@ import ProblemSolution from "./components/ProblemSolution";
 import Services from "./components/Services";
 import Process from "./components/Process";
 import Impact from "./components/Impact";
+import Mission from "./components/Mission";
 import Results from "./components/Results";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <Process />
       <Impact />
+      <Mission />
       <Results />
       <Testimonials />
       <FAQ />

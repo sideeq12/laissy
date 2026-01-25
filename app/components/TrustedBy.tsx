@@ -16,9 +16,7 @@ export default function TrustedBy() {
                     {[
                         "Accounting Firms",
                         "Law Firms",
-                        "Housing Agencies",
-                        "Hospitality",
-                        "Debt Recovery"
+                        "Housing Agencies"
                     ].map((sector, index) => (
                         <motion.span
                             key={sector}
