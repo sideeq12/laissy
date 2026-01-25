@@ -3,17 +3,42 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send, CheckCircle2, Loader2, ArrowRight } from "lucide-react";
+import { sendContactEmail } from "../actions/sendEmail";
 
 export default function ContactForm() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [error, setError] = useState("");
     const [selectedInterest, setSelectedInterest] = useState("");
+    const [formData, setFormData] = useState({
+        firstName: "",
+        surname: "",
+        email: "",
+        company: "",
+        role: "",
+        problem: ""
+    });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus("submitting");
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setStatus("success");
+        setError("");
+
+        const result = await sendContactEmail({
+            ...formData,
+            interest: selectedInterest
+        });
+
+        if (result.success) {
+            setStatus("success");
+        } else {
+            setStatus("idle");
+            setError(result.error || "Failed to send. Please try again.");
+        }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
     };
 
     return (
@@ -70,10 +95,21 @@ export default function ContactForm() {
                                     </div>
                                     <h3 className="text-2xl font-bold mb-2 text-gray-900">Message Received</h3>
                                     <p className="text-gray-600 max-w-xs mx-auto">
-                                        Thanks. We review every request manually and will follow up if there's a fit.
+                                        Thanks {formData.firstName}. We've received your request and sent a confirmation email.
                                     </p>
                                     <button
-                                        onClick={() => setStatus("idle")}
+                                        onClick={() => {
+                                            setStatus("idle");
+                                            setFormData({
+                                                firstName: "",
+                                                surname: "",
+                                                email: "",
+                                                company: "",
+                                                role: "",
+                                                problem: ""
+                                            });
+                                            setSelectedInterest("");
+                                        }}
                                         className="mt-6 text-sm text-primary hover:text-primary/80 font-medium"
                                     >
                                         Send another request
@@ -82,14 +118,56 @@ export default function ContactForm() {
                             ) : (
                                 <>
                                     <h4 className="text-xl font-bold text-gray-900 mb-6">Send Us a Message</h4>
-                                    <form onSubmit={handleSubmit} className="space-y-5">
-                                        {/* 1. Work Email (High Signal Filter) */}
+                                    <form onSubmit={handleSubmit} className="space-y-5 text-left">
+                                        {error && (
+                                            <div className="bg-red-50 text-red-500 p-4 rounded-xl text-sm mb-6 border border-red-100 italic font-bold">
+                                                {error}
+                                            </div>
+                                        )}
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                            {/* 1. First Name */}
+                                            <div>
+                                                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                                    First Name <span className="text-red-500">*</span>
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="firstName"
+                                                    value={formData.firstName}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
+                                                    placeholder="John"
+                                                />
+                                            </div>
+                                            {/* 2. Surname */}
+                                            <div>
+                                                <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
+                                                    Surname <span className="text-red-500">*</span>
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="surname"
+                                                    value={formData.surname}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
+                                                    placeholder="Doe"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* 3. Work Email */}
                                         <div>
                                             <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 block">
                                                 Work Email <span className="text-red-500">*</span>
                                             </label>
                                             <input
                                                 type="email"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
                                                 required
                                                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
                                                 placeholder="name@company.com"
@@ -103,6 +181,9 @@ export default function ContactForm() {
                                             </label>
                                             <input
                                                 type="text"
+                                                name="company"
+                                                value={formData.company}
+                                                onChange={handleChange}
                                                 required
                                                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400"
                                                 placeholder="Acme Consulting Ltd"
@@ -115,9 +196,11 @@ export default function ContactForm() {
                                                 Your Role <span className="text-red-500">*</span>
                                             </label>
                                             <select
+                                                name="role"
+                                                value={formData.role}
+                                                onChange={handleChange}
                                                 required
                                                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all [&>option]:bg-white"
-                                                defaultValue=""
                                             >
                                                 <option value="" disabled>Select your role...</option>
                                                 <option value="partner">Partner / Founder</option>
@@ -151,6 +234,9 @@ export default function ContactForm() {
                                                 What problem are you trying to solve? <span className="text-red-500">*</span>
                                             </label>
                                             <textarea
+                                                name="problem"
+                                                value={formData.problem}
+                                                onChange={handleChange}
                                                 required
                                                 rows={6}
                                                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-primary/50 focus:ring-1 focus:ring-primary/50 outline-none transition-all placeholder:text-gray-400 resize-none"
