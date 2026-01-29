@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -62,7 +62,7 @@ export default function Hero() {
                         </div>
 
                         {/* Call to Action */}
-                        <div className="flex flex-col items-start gap-4">
+                        <div className="flex flex-col sm:flex-row items-start gap-4">
                             <motion.a
                                 href="#contact"
                                 whileHover={{ scale: 1.02 }}
@@ -72,14 +72,23 @@ export default function Hero() {
                                 Request a Consultation
                                 <ArrowRight className="w-5 h-5" />
                             </motion.a>
-                            <a
-                                href="#process"
-                                className="text-white/60 hover:text-white text-sm font-medium transition-colors ml-2 flex items-center gap-1 group"
+                            <motion.a
+                                href="tel:+447311297549"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 transition-all duration-200 backdrop-blur-sm"
                             >
-                                How it works
-                                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                            </a>
+                                <Phone className="w-5 h-5" />
+                                +44 7311 297549
+                            </motion.a>
                         </div>
+                        <a
+                            href="#process"
+                            className="text-white/60 hover:text-white text-sm font-medium transition-colors ml-2 flex items-center gap-1 group mt-4"
+                        >
+                            How it works
+                            <span className="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
                     </motion.div>
                 </div>
             </div>

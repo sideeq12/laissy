@@ -10,13 +10,16 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-2">
                         <div className="flex items-center mb-6">
-                            <img src="/logopng.png" alt="Lovissa Consulting Logo" className="h-8 w-auto object-contain brightness-0 invert" />
+                            <img src="/darklogo.png" alt="Lovissa Consulting Logo" className="h-20 w-auto object-contain" />
                         </div>
                         <p className="text-white/60 max-w-sm leading-relaxed mb-4">
                             CRM automation for professional firms. Reducing admin workload with safe, human-in-the-loop systems.
                         </p>
                         <p className="text-white/40 text-sm mb-2">
                             Address: 26, The Monico. Pantbach Road. CF14 1UU
+                        </p>
+                        <p className="text-white/40 text-sm mb-2">
+                            Phone: +447311297549
                         </p>
                         <a href="mailto:info@lovissaconsulting.co.uk" className="text-white/40 text-sm mb-8 block hover:text-primary transition-colors flex items-center gap-2">
                             <Mail className="w-3.5 h-3.5 text-primary" />
@@ -26,7 +29,7 @@ export default function Footer() {
                             <a href="https://www.linkedin.com/company/lovissa-consulting-ltd/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="https://www.instagram.com/lovissaconsultingltd?igsh=eDVlYWM5bjVteW44" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                            <a href="https://www.instagram.com/p/DTuxkZajMl7/?igsh=MXFkdjJhc3U2b2x5Ng==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
                                 <Instagram className="w-5 h-5" />
                             </a>
                         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const partners: string[] = [];
@@ -14,19 +15,26 @@ export default function TrustedBy() {
 
                 <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 opacity-60">
                     {[
-                        "Accounting Firms",
-                        "Law Firms",
-                        "Housing Agencies"
+                        { name: "Accounting Firms", href: "#" },
+                        { name: "Law Firms", href: "#" },
+                        { name: "Housing Agencies", href: "#" }
                     ].map((sector, index) => (
-                        <motion.span
-                            key={sector}
+                        <motion.div
+                            key={sector.name}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: index * 0.1 }}
-                            className="text-lg sm:text-xl md:text-2xl text-black font-bold tracking-tight  transition-colors cursor-default"
                         >
-                            {sector}
-                        </motion.span>
+                            <Link
+                                href={sector.href}
+                                className={`text-lg sm:text-xl md:text-2xl text-black font-bold tracking-tight transition-all ${sector.href !== "#"
+                                    ? "hover:text-primary cursor-pointer border-b-2 border-transparent hover:border-primary/30"
+                                    : "cursor-default"
+                                    }`}
+                            >
+                                {sector.name}
+                            </Link>
+                        </motion.div>
                     ))}
                 </div>
             </div>

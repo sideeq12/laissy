@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -24,7 +24,7 @@ export default function Navbar() {
         className="bg-white shadow-xl w-full max-w-7xl px-6 py-4 rounded-full flex items-center justify-between border border-gray-100"
       >
         <div className="flex items-center">
-          <img src="/logopng.png" alt="Lovissa Consulting Logo" className="h-8 w-auto object-contain" />
+          <img src="/whitelogo.png" alt="Lovissa Consulting Logo" className="h-14 w-auto object-contain" />
         </div>
 
         {/* Desktop Links */}
@@ -39,6 +39,13 @@ export default function Navbar() {
               {link.name}
             </motion.a>
           ))}
+          <a
+            href="tel:+447311297549"
+            className="bg-white border-2 border-primary hover:bg-primary/5 text-primary px-5 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-2"
+          >
+            <Phone className="w-4 h-4" />
+            +44 7311 297549
+          </a>
           <a
             href="#contact"
             className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all"
@@ -74,6 +81,14 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <a
+            href="tel:+447311297549"
+            className="bg-white border-2 border-primary text-primary w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Phone className="w-5 h-5" />
+            +44 7311 297549
+          </a>
           <a href="#contact" className="bg-primary w-full py-4 rounded-xl font-bold block text-center text-white">
             Get Started
           </a>
