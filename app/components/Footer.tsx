@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
+import { Bot, Linkedin, Instagram, Mail, ArrowRight, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -29,8 +29,14 @@ export default function Footer() {
                             <a href="https://www.linkedin.com/company/lovissa-consulting-ltd/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="https://www.instagram.com/p/DTuxkZajMl7/?igsh=MXFkdjJhc3U2b2x5Ng==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                            <a href="https://www.instagram.com/lovissaconsultingltd/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
                                 <Instagram className="w-5 h-5" />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61586752351996" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                                <Facebook className="w-5 h-5" />
+                            </a>
+                            <a href="https://www.youtube.com/@lovissaconsulting" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                                <Youtube className="w-5 h-5" />
                             </a>
                         </div>
                     </div>
