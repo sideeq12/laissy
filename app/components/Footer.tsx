@@ -26,7 +26,7 @@ export default function Footer() {
                             info@lovissaconsulting.co.uk
                         </a>
                         <div className="flex gap-4">
-                            <a href="https://www.linkedin.com/company/lovissa-consulting-ltd/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
+                            <a href="https://www.linkedin.com/company/lovissa-consulting-ltd/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
                                 <Linkedin className="w-5 h-5" />
                             </a>
                             <a href="https://www.instagram.com/lovissaconsultingltd/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-primary transition-all">
