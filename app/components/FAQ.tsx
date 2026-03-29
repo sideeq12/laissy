@@ -12,7 +12,7 @@ const faqs = [
     },
     {
         q: "What exactly does the system automate?",
-        a: "It automates high-volume, repetitive client communication across email, chat, booking, and voice channels—handling enquiries like VAT deadlines, invoice resends, document status, and appointment scheduling."
+        a: "It automates high-volume, repetitive client communication across email, chat, booking, data cleaning and voice channels—handling enquiries like VAT deadlines, invoice resends, document status, and appointment scheduling."
     },
     {
         q: "How does your automation work with our existing systems?",
