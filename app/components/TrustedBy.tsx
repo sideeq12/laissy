@@ -17,7 +17,7 @@ export default function TrustedBy() {
                     {[
                         { name: "Accounting Firms", href: "#" },
                         { name: "Law Firms", href: "#" },
-                        { name: "Housing Agencies", href: "#" }
+
                     ].map((sector, index) => (
                         <motion.div
                             key={sector.name}

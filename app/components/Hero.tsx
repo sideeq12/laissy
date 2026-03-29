@@ -24,7 +24,7 @@ export default function Hero() {
             </div>
 
             <div className="container px-6 sm:px-8 lg:px-12 relative z-10">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl text-center border-2 mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -33,13 +33,12 @@ export default function Hero() {
                         <h2 className="text-[#E0E0E0] font-medium tracking-wide uppercase text-sm mb-4">
                             For Professional Firms
                         </h2>
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-                            Safe, Rule-Based <br className="hidden sm:block" />
-                            CRM Automation
+                        <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
+                            Automation and Data workflow solutions for
+                            Professional Firms.
                         </h1>
                         <p className="text-[#E0E0E0] text-lg sm:text-xl mb-10 leading-relaxed font-light opacity-90 max-w-2xl">
-                            Eliminate repetitive administrative work while maintaining total regulatory integrity. We design safe, human-in-the-loop systems specifically for professional service firms.
-                        </p>
+                            Lovissa Consulting helps accounting and law firms automate client onboarding, invoicing, and admin workflows while ensuring data is clean, consistent, and audit-ready.                        </p>
 
                         {/* Trust Signals / Stat Badges */}
                         <div className="flex flex-wrap gap-3 mb-10">
@@ -62,7 +61,7 @@ export default function Hero() {
                         </div>
 
                         {/* Call to Action */}
-                        <div className="flex flex-col sm:flex-row items-start gap-4">
+                        <div className="flex flex-col sm:flex-row items-center mx-auto justify-center gap-4">
                             <motion.a
                                 href="#contact"
                                 whileHover={{ scale: 1.02 }}

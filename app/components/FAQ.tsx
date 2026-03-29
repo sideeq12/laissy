@@ -14,10 +14,18 @@ const faqs = [
         q: "What exactly does the system automate?",
         a: "It automates high-volume, repetitive client communication across email, chat, booking, and voice channels—handling enquiries like VAT deadlines, invoice resends, document status, and appointment scheduling."
     },
+    {
+        q: "How does your automation work with our existing systems?",
+        a: "Our solutions are designed to integrate with your current tools, including Law & accounting systems, CRM, and internal workflows. We don’t replace your systems, we enhance them by automating processes and improving data flow."
+    },
 
 
     // SAFETY, CONTROL & TRUST
 
+    {
+        q: "Will automation replace our staff?",
+        a: "No. Our approach is built around human oversight. We automate repetitive administrative tasks, allowing your team to focus on higher-value work that requires professional judgement."
+    },
     {
         q: "Can we review responses before they're sent?",
         a: "Yes. The platform starts in draft-only mode where all AI-generated responses require staff approval before sending. Auto-send is only enabled when you're ready."
@@ -47,8 +55,12 @@ const faqs = [
 
     // DATA, PRIVACY & COMPLIANCE
     {
-        q: "Is client data shared with third parties?",
-        a: "No. Your firm's data stays within your isolated environment. We use private LLM instances and secure API connections—your data never trains public models."
+        q: "How do you ensure data security and compliance?",
+        a: "We design all workflows with data protection, controlled access, and auditability in mind. Sensitive or uncertain cases are always escalated to your team, ensuring compliance with professional standards."
+    },
+    {
+        q: "Can your system handle data inconsistencies or duplicates?",
+        a: "Yes. Our workflows include data cleaning, standardisation, and validation processes to ensure information is accurate, consistent, and ready for use across your systems."
     },
     {
         q: "How is client data kept separate between firms?",

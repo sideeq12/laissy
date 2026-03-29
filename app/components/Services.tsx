@@ -5,20 +5,20 @@ import { Bot, Cpu, Mail } from "lucide-react";
 
 const services = [
     {
-        title: "CRM Automation",
-        desc: "Automate CRM updates and client communication with safe, firm-approved responses. Always includes clear escalation paths to your team.",
+        title: "Data & CRM Automation",
+        desc: "We automate data handling across your systems - cleaning, standardising, and updating records, while ensuring accuracy, consistency, and full control.",
         icon: <Mail className="w-8 h-8" />,
         color: "bg-primary"
     },
     {
         title: "Email & Chat Workflow Design",
-        desc: "We design intent-based workflows that mirror your best staff. You approve every response template before it goes live.",
+        desc: "We design workflows that automate client communication, onboarding, and admin tasks using approved templates and clear rules. All processes include human oversight and escalation where needed.",
         icon: <Bot className="w-8 h-8" />,
         color: "bg-emerald-500"
     },
     {
-        title: "Automation Strategy",
-        desc: "Process mapping, risk assessment, and phased rollout planning (Pilot → Scale). We ensure compliance and staff buy-in.",
+        title: "Automation Strategy & Implementation.",
+        desc: "We identify key areas for automation, design structured workflows, and implement them in phases (Pilot → Scale), ensuring compliance and smooth team adoption.",
         icon: <Cpu className="w-8 h-8" />,
         color: "bg-purple-500"
     }

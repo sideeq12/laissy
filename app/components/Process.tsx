@@ -6,36 +6,36 @@ import { Target, Search, Share2, ShieldCheck, FileText, ArrowUpRight } from "luc
 const steps = [
     {
         num: "01",
-        title: "Frame the Goal",
-        desc: "We define CRM automation, focus on email and chatbot—safe and measurable.",
+        title: "Define the Goal",
+        desc: "We identify key processes to automate such as client onboarding, invoicing, and data handling —focusing on clear, measurable outcomes.",
         icon: <Target className="w-6 h-6" />,
         date: "Phase 1"
     },
     {
         num: "02",
-        title: "Scope Definition",
-        desc: "Deadlines reminder, invoices, and process guidance. Clear escalation rules.",
+        title: "Scope & Design",
+        desc: "We define workflows, including reminders, invoicing, and admin processes, with clear rules and escalation paths.",
         icon: <Search className="w-6 h-6" />,
         date: "Phase 2"
     },
     {
         num: "03",
-        title: "Shared Logic",
-        desc: "Email and chatbot share the same intent logic and rules.",
+        title: "Build & Integrate.",
+        desc: "We develop workflows that connect across email, forms, CRM, and your existing systems using shared logic.",
         icon: <Share2 className="w-6 h-6" />,
         date: "Phase 3"
     },
     {
         num: "04",
-        title: "Quality Control",
-        desc: "Strict quality rules. If unsure, the system escalates immediately.",
+        title: "Quality & Data Protection",
+        desc: "We apply validation checks, data consistency rules, and security controls. Any uncertainty or sensitive case is escalated to your team.",
         icon: <ShieldCheck className="w-6 h-6" />,
         date: "Phase 4"
     },
     {
-        num: "05",
-        title: "Documentation",
-        desc: "Full documentation of intents and flows for maintainability.",
+        num: "Launch ",
+        title: "Documentation & Compliance",
+        desc: "We provide full documentation of workflows, data handling processes, and controls to support compliance and ongoing management.",
         icon: <FileText className="w-6 h-6" />,
         date: "Launch"
     }

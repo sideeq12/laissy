@@ -23,10 +23,10 @@ export default function Mission() {
                             Our Mission
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
-                            To help professional service organisations <span className="text-primary italic">reduce repetitive work</span> through safe, rule-based automation.
+                            To help professional service firms <span className="text-primary italic">reduce manual work</span> through safe, structured automation.
                         </h2>
                         <p className="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">
-                            We exist to preserve human oversight, compliance, and professional standards while eliminating the administrative burden of client-facing tasks.
+                            Improving efficiency, data quality, and client service without compromising human oversight or professional standards.
                         </p>
                     </motion.div>
 
@@ -50,10 +50,10 @@ export default function Mission() {
                             Our Vision
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
-                            To become a <span className="text-emerald-500 italic">trusted global partner</span> for professional service organisations.
+                            To become a <span className="text-emerald-500 italic">trusted partner</span> for professional service firms.
                         </h2>
                         <p className="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl mx-auto">
-                            Helping them operate more efficiently through responsible automation that enhances, not replaces, human judgement.
+                            Helping them operate more efficiently through responsible automation that supports not replaces human judgement.
                         </p>
                     </motion.div>
                 </div>

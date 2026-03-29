@@ -239,10 +239,15 @@ export default function Impact() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     className="glass-card p-6 sm:p-8 text-center border-primary/20"
                 >
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <Shield className="w-5 h-5 text-primary" />
-                        <p className="text-sm sm:text-base font-semibold text-gray-700">
-                            Automation is intentionally limited. When confidence drops, the system escalates.
+                    <div className="flex flex-col items-center justify-center gap-3 mb-4">
+                        <div className="flex items-center justify-center gap-2">
+                            <Shield className="w-5 h-5 text-primary" />
+                            <p className="text-sm sm:text-base font-semibold text-gray-700">
+                                Automation is intentionally limited. When confidence drops, the system escalates.
+                            </p>
+                        </div>
+                        <p className="text-sm sm:text-base font-medium text-gray-700">
+                            All solutions are designed with data protection, auditability, and human oversight at the core.
                         </p>
                     </div>
                     <p className="text-xs sm:text-sm text-gray-400">
