@@ -239,15 +239,12 @@ export default function Impact() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     className="glass-card p-6 sm:p-8 text-center border-primary/20"
                 >
-                    <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="flex items-center justify-center gap-2">
                         <Shield className="w-5 h-5 flex-shrink-0 text-primary" />
                         <p className="text-sm sm:text-base font-semibold text-gray-700">
                             All solutions are designed with data protection, auditability, and human oversight at the core.
                         </p>
                     </div>
-                    <p className="text-xs sm:text-sm text-gray-400">
-                        Based on pilot deployments and early production usage. Results vary by firm size, enquiry volume, and complexity.
-                    </p>
                 </motion.div>
             </div>
         </section>
