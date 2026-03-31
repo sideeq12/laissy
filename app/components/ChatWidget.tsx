@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, User, Bot, Loader2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 interface Message {
     role: "user" | "bot";
@@ -116,12 +117,23 @@ export default function ChatWidget() {
                                     className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
                                 >
                                     <div
-                                        className={`max-w-[80%] px-4 py-2 rounded-2xl text-sm ${m.role === "user"
+                                        className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm ${m.role === "user"
                                             ? "bg-black text-white rounded-tr-none"
                                             : "bg-gray-100 text-gray-800 rounded-tl-none border border-gray-200"
                                             }`}
                                     >
-                                        {m.text}
+                                        <ReactMarkdown
+                                            components={{
+                                                p: ({ node, ...props }) => <p className="mb-2 last:mb-0 leading-relaxed" {...props} />,
+                                                ul: ({ node, ...props }) => <ul className="list-disc ml-5 mb-2 space-y-1" {...props} />,
+                                                ol: ({ node, ...props }) => <ol className="list-decimal ml-5 mb-2 space-y-1" {...props} />,
+                                                li: ({ node, ...props }) => <li className="" {...props} />,
+                                                strong: ({ node, ...props }) => <strong className="font-semibold" {...props} />,
+                                                a: ({ node, ...props }) => <a className="underline text-blue-600 hover:text-blue-800" {...props} />,
+                                            }}
+                                        >
+                                            {m.text}
+                                        </ReactMarkdown>
                                     </div>
                                 </motion.div>
                             ))}
