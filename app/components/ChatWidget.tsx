@@ -14,6 +14,7 @@ export default function ChatWidget() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [sessionId] = useState(() => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export default function ChatWidget() {
             const res = await fetch("/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: input }),
+                body: JSON.stringify({ message: input, sessionId }),
             });
 
             if (!res.ok) throw new Error("Failed to send message");

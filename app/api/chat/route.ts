@@ -8,16 +8,28 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: "n8n webhook URL is not configured" }, { status: 500 });
     }
 
-    const res = await fetch(n8nUrl,
-        {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                chatInput: body.message // map frontend -> n8n
-            }),
-        }
-    );
+    try {
+        const res = await fetch(n8nUrl,
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    action: "sendMessage",
+                    chatInput: body.message,
+                    sessionId: body.sessionId || "default-session"
+                }),
+            }
+        );
 
-    const data = await res.json();
-    return NextResponse.json(data);
+        if (!res.ok) {
+            console.error("N8n proxy response not ok:", res.status, res.statusText);
+            throw new Error(`n8n responded with status: ${res.status}`);
+        }
+
+        const data = await res.json();
+        return NextResponse.json(data);
+    } catch (error) {
+        console.error("Error communicating with n8n:", error);
+        return NextResponse.json({ error: "Chatbot service is currently unavailable." }, { status: 500 });
+    }
 }
